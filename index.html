@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Css/bootstrap.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <title>CRUDS</title>
+</head>
+<body>
+    <div class="crud container">
+        <div class="head text-center py-3">
+            <h2 class="text-uppercase fw-bolder">crud</h2>
+            <p class="fw-bold">PRODUCT MANAGEMENT SYSTEM</p>
+        </div>
+        <div class="inputs row px-2 align-items-center">
+            <input type="text"   id="title" placeholder="Title" class="title mb-2 col-12">
+            <input onkeyup="getTotal()" type="number" id="price" placeholder="Price" class="price col-2">
+            <input onkeyup="getTotal()" type="number" id="taxes" placeholder="Taxes" class="taxes col-2">
+            <input onkeyup="getTotal()" type="number" id="ads" placeholder="Ads" class="ads col-2">
+            <input onkeyup="getTotal()" type="number" id="discount" placeholder="Discount" class="discount col-2">
+            <span id="total" class="total col-3 d-flex justify-content-start align-items-center"> 0</span>
+            <input type="number" id="count" placeholder="Count" class="col-12 mt-2">
+            <input type="text" id="category" placeholder="Category" class="col-12 mt-2">
+            <button id="submit" class="col-12 mt-2 fw-bolder">Create</button>
+        </div>
+        <div class="outputs">
+            <input type="text" id="search" placeholder="Search" onkeyup="searchInp(this.value)" class="col-12 mt-2">
+            <div class="btns-search row px-2 mt-2">
+                <button onclick="searchProd(this.id)" id="seachTitle">Search By Title</button>
+                <button onclick="searchProd(this.id)" id="seachCategory">Search By Category</button>
+            </div>
+            <div id="deleteAll">
+                
+            </div>
+            <table class="col-12 mt-3">
+                <tr>
+                    <th>Id</th>
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Taxes</th>
+                    <th>Ads</th>
+                    <th>Discount</th>
+                    <th>Total</th>
+                    <th>Category</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                </tr>
+
+                <tbody class="list" id="list">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
